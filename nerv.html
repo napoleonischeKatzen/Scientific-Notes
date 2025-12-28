@@ -11,22 +11,24 @@ body {
 .top {
   text-align: center;
 }
-.link {
-
-  margin-right: 10px;     /* Optional: space between the links */
-  text-align: center;
+.links-container {
+  display: flex;           /* Use flexbox to align the items horizontally */
+  justify-content: center; /* Center the links horizontally */
+  gap: 20px;               /* Add space between the links */
+  margin-top: 20px;
 }
-a {
+.link a {
   color: red;
   text-decoration: none;
   font-size: 20px;
+  font-family: 'Times New Roman', serif;
 }
 #imageFrame {
   width: 600px;  /* You can adjust the size of the image frame */
   height: 400px;
-  border: 2px solid red;
   margin-top: 20px;
   display: none;  /* Hidden by default until a link is hovered over */
+  border: none;   /* Remove the border */
 }
 img {
   width: 100%;  /* Makes the image fit the frame */
@@ -38,11 +40,13 @@ img {
 <body>
 <h1 class="top" style="color: red">Notes Scientifiques</h1>
 
-<!-- Links -->
-<div><h3 class="link"><a href="Mathematik/mathematik.html" onmouseover="changeImage('mathematik.jpg')">Mathematik</a></h3></div>
-<div><h3 class="link"><a href="Physik/physik.html" onmouseover="changeImage('physik.jpg')">Physik</a></h3></div>
-<div><h3 class="link"><a href="Statistik/statistik.html" onmouseover="changeImage('statistik.jpg')">Statistik</a></h3></div>
-<div><h3 class="link"><a href="Programmierung/programmierung.html" onmouseover="changeImage('images/programmierung.png')">Programmierung</a></h3></div>
+<!-- Links Container -->
+<div class="links-container">
+  <div class="link"><a href="Mathematik/mathematik.html" onmouseover="changeImage('mathematik.jpg')">Mathematik</a></div>
+  <div class="link"><a href="Physik/physik.html" onmouseover="changeImage('physik.jpg')">Physik</a></div>
+  <div class="link"><a href="Statistik/statistik.html" onmouseover="changeImage('statistik.jpg')">Statistik</a></div>
+  <div class="link"><a href="Programmierung/programmierung.html" onmouseover="changeImage('images/programmierung.png')">Programmierung</a></div>
+</div>
 
 <!-- Image Frame -->
 <div id="imageFrame">
@@ -58,7 +62,8 @@ function changeImage(imageName) {
   // Update the image source
   frameImage.src = imageName;
   
-
+  // Display the image frame
+  imageFrame.style.display = "block";  // Make the image frame visible
 }
 </script>
 </body>

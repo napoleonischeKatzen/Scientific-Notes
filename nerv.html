@@ -1,88 +1,17 @@
-<!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
 <title>Nerv</title>
 <style>
-body, html {
+body {
   font-family: 'Times New Roman', serif;
-  background-color: black;
-  margin: 0;  /* Remove default margin */
-  padding: 0; /* Remove default padding */
-  height: 100%;  /* Ensure the body and html take up full height */
-}
-.top {
-  text-align: center;
-  margin-top: 20px; /* Space between header and links */
-}
-.links-container {
-  display: flex;           /* Use flexbox to align the items horizontally */
-  justify-content: center; /* Center the links horizontally */
-  gap: 20px;               /* Add space between the links */
-  margin-top: 20px;
-}
-.link a {
-  color: red;
-  text-decoration: none;
-  font-size: 20px;
-}
-.link a:hover {
-  text-decoration: underline;  /* Red underline on hover */
-}
-#imageFrame {
-  width: 75vw;    /* Half of the viewport width */
-  height: 25vh;   /* Half of the viewport height */
-  display: none;   /* Hidden by default until a link is hovered over */
-  position: absolute; /* Position it absolutely below the text */
-  top: 120px;      /* Push it below the header and links */
-  left: 50%;       /* Center it horizontally */
-  transform: translateX(-50%);  /* Perfect centering */
-  text-align: center; /* Center content inside */
-}
-img {
-  width: 100%;   /* Makes the image fit the frame */
-  height: 100%;
-  object-fit: cover;  /* Ensures the image covers the entire frame */
-}
-#category {
-  color: red;
-  font-size: 20px;
-  margin-top: 10px;  /* Space between image and category name */
-  text-decoration: underline; /* Red underline */
-}
 </style>
 </head>
-<body>
+<body style="background-color: black">
 <h1 class="top" style="color: red">Notes Scientifiques</h1>
-
-<!-- Links Container -->
-<div class="links-container">
-  <div class="link"><a href="#" onmouseover="changeImage('mathematik.jpg', 'Mathematik')">Mathematik</a></div>
-  <div class="link"><a href="#" onmouseover="changeImage('physik.jpg', 'Physik')">Physik</a></div>
-  <div class="link"><a href="#" onmouseover="changeImage('statistik.jpg', 'Statistik')">Statistik</a></div>
-  <div class="link"><a href="#" onmouseover="changeImage('images/programmierung.png', 'Programmierung')">Programmierung</a></div>
-</div>
-
-<!-- Image Frame -->
-<div id="imageFrame">
-  <img id="frameImage" src="" alt="Image will appear here">
-  <div id="category"></div>
-</div>
-
-<script>
-// Function to change the image and category based on the link hover
-function changeImage(imageName, category) {
-  const imageFrame = document.getElementById("imageFrame");
-  const frameImage = document.getElementById("frameImage");
-  const categoryElement = document.getElementById("category");
-  
-  // Update the image source and category text
-  frameImage.src = imageName;
-  categoryElement.textContent = category;  // Display the category name below the image
-  
-  // Display the image frame
-  imageFrame.style.display = "block";  // Make the image frame visible
-}
-</script>
+<h4 class="link"><a style="color: red; text-decoration: none;" href="Mathematik/mathematik.html">Mathematik</a></h4>
+<h4 class="link"><a style="color: red; text-decoration: none;" href="Physik/physik.html">Physik</a></h4>
+<h4 class="link"><a style="color: red; text-decoration: none;" href="Statistik/statistik.html">Statistik</a></h4>
+<h4 class="link"><a style="color: red; text-decoration: none;" href="Programmierung/programmierung.html">Programmierung</a></h4>
 </body>
 </html>

@@ -4,12 +4,16 @@
 <meta charset="utf-8">
 <title>Nerv</title>
 <style>
-body {
+body, html {
   font-family: 'Times New Roman', serif;
   background-color: black;
+  margin: 0;  /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  height: 100%;  /* Ensure the body and html take up full height */
 }
 .top {
   text-align: center;
+  margin-top: 20px; /* Space between header and links */
 }
 .links-container {
   display: flex;           /* Use flexbox to align the items horizontally */
@@ -21,15 +25,13 @@ body {
   color: red;
   text-decoration: none;
   font-size: 20px;
-  font-family: 'Times New Roman', serif;
 }
 #imageFrame {
   width: 100vw;    /* Full viewport width */
-  height: 75vh;   /* Full viewport height */
+  height: 100vh;   /* Full viewport height */
   display: none;   /* Hidden by default until a link is hovered over */
   position: absolute; /* Position it absolutely to cover the entire screen */
-  top: 0;
-  left: 0;
+  top: 120px;      /* Push it below the header and links (adjust if necessary) */
 }
 img {
   width: 100%;   /* Makes the image fit the frame */

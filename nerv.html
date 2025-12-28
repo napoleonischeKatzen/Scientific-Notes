@@ -24,14 +24,15 @@ body {
   font-family: 'Times New Roman', serif;
 }
 #imageFrame {
-  width: 600px;  /* You can adjust the size of the image frame */
-  height: 400px;
-  margin-top: 20px;
-  display: none;  /* Hidden by default until a link is hovered over */
-  border: none;   /* Remove the border */
+  width: 100vw;    /* Full viewport width */
+  height: 100vh;   /* Full viewport height */
+  display: none;   /* Hidden by default until a link is hovered over */
+  position: absolute; /* Position it absolutely to cover the entire screen */
+  top: 0;
+  left: 0;
 }
 img {
-  width: 100%;  /* Makes the image fit the frame */
+  width: 100%;   /* Makes the image fit the frame */
   height: 100%;
   object-fit: cover;  /* Ensures the image covers the entire frame */
 }

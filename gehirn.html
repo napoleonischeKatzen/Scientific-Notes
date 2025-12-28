@@ -2,27 +2,51 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Gehirn</title>
+<title>Nerv</title>
 <style>
 body {
   font-family: 'Times New Roman', serif;
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  height: 100%;  /* Ensure body takes full height */
 }
 .top {
-  text-align: center;
-}
-.link {
-  text-indent: 15%;
+  text-align: center;  /* Centers the title horizontally */
   color: red;
-  text-decoration: none; 
-  background-color: none;
+  margin-top: 50px;  /* Adds some space between the title and links */
+}
+
+.links-container {
+  display: flex;           /* Use flexbox for horizontal alignment */
+  justify-content: space-between; /* Equal space between the links */
+  gap: 20px;               /* Adds some optional space between the links */
+  width: 80%;              /* Control the width of the link container */
+  margin: 0 auto;          /* Centers the links container */
+  margin-top: 30px;        /* Adds space between the title and the links */
+}
+
+.link a {
+  color: red;
+  text-decoration: none;  /* Remove default underline */
+  font-size: 20px;
+}
+
+.link a:hover {
+  text-decoration: underline;  /* Adds underline on hover */
+  color: red;                  /* Ensures the color stays red */
 }
 </style>
 </head>
-<body style="background-color: black">
-<h1 class="top" style="color: red">Notes Classiques</h1>
-<h1 class="link"><a style="color: red; text-decoration: none;" href="Literatur/literatur.html">Literatur</a></h1>
-<h1 class="link"><a style="color: red; text-decoration: none;" href="Philosophie/philosophie.html">Philosophie</a></h1>
-<h1 class="link"><a style="color: red; text-decoration: none;" href="Theologie/theologie.html">Theologie</a></h1>
-<h1 class="link"><a style="color: red; text-decoration: none;" href="Analyse/analyse.html">Psychologische Analyse</a></h1>
+<body>
+<h1 class="top">Notes Scientifiques</h1>
+
+<!-- Links Container -->
+<div class="links-container">
+  <h2 class="link"><a href="Mathematik/mathematik.html">Literatur</a></h2>
+  <h2 class="link"><a href="Physik/physik.html">Philosophie</a></h2>
+  <h2 class="link"><a href="Statistik/statistik.html">Theologie</a></h2>
+  <h2 class="link"><a href="Programmierung/programmierung.html">Psychologische Analyse</a></h2>
+</div>
 </body>
 </html>
